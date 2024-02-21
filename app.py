@@ -23,3 +23,6 @@ response = client.chat.completions.create(
 
 ai_response = response.choices[0].message.content
 print("\nSummarized text: \n\n", ai_response, "\n")
+
+with open("summary.txt", "w") as file:
+    file.write(ai_response)
